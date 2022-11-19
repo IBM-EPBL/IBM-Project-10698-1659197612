@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Input Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleform.css') }}">
+  </head>
+  <body>
+{%extends "layout.html" %}
+{%block content%}
+  
+
+<div id="cont">
+  <h1>Welcome {{msg}}</h1>
+<div id="inputform">
+  <h1 id="#hd" style={"color:white;"}>Input Data</h1>
+    <form method="POST" action ="/predict">
+      <div>
+        <label for="date">Date</label>
+        <br>
+        <input name="date"required>
+      </div>
+        <div id="butn">
+        <input type="submit" >
+      </div>
+    </form>
+    
+  </div>
+</div>
+</body>
+{% endblock %}
+
+</html>
